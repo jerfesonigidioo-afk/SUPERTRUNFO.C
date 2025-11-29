@@ -63,6 +63,30 @@ scanf("%f", &PIB2);
 printf("Numero de pontos turisticos: ");
 scanf("%i", &numerodepontosturisticos2);
 
+//Calcular a Densidade Populacional//
+
+//carta 1
+
+float densidade;
+densidade=populacao/area;
+
+//carta 2//
+
+float densidade2;
+densidade2=populacao2/area2;
+
+//Calcular o PIB per Capita//
+
+//carta 1//
+
+float capital;
+capital=PIB/populacao;
+
+//carta 2//
+
+float capital2;
+capital2=PIB2/populacao2;
+
 //informaçoes das cartas //
 
 //carta 1//
@@ -76,9 +100,11 @@ printf("populaçao: %i \n", populacao);
 printf("Area: %.3f (em km2) \n", area);
 printf("PIB: %.3f de reais \n", PIB);
 printf("Numero de pontos turisticos: %i \n", numerodepontosturisticos);
+printf("a Densidade Populacional e de :%.2f hab/km²\n", densidade);
+printf("o PIB per Capita e de:%.2f reais\n", capital);
 
 //carta 2//
-printf("mm");
+
 printf("\nSUA SEGUNDA CARTA TEM OS SEGUINTES ATRIBUTOS!\n");
 printf("carta: 2");
 printf("Estado: %s \n", estado2);
@@ -88,6 +114,8 @@ printf("populaçao: %i \n", populacao2);
 printf("Area: %.3f (em km2) \n", area2);
 printf("PIB: %.3f de reais \n", PIB2);
 printf("Numero de pontos turisticos: %i \n", numerodepontosturisticos2);
+printf("a Densidade Populacional e de :%.2f hab/km²\n", densidade2);
+printf("o PIB per Capita e de:%.2f reais\n", capital2);
 
 return 0;
 }
