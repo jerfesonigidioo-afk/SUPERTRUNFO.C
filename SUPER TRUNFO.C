@@ -78,8 +78,8 @@ printf("PIB: %.3f de reais \n", PIB);
 printf("Numero de pontos turisticos: %i \n", numerodepontosturisticos);
 
 //carta 2//
-
- printf("\nSUA SEGUNDA CARTA TEM OS SEGUINTES ATRIBUTOS!\n");
+printf("mm");
+printf("\nSUA SEGUNDA CARTA TEM OS SEGUINTES ATRIBUTOS!\n");
 printf("carta: 2");
 printf("Estado: %s \n", estado2);
 printf("codigo da carta: %s \n", codigodacarta2);
