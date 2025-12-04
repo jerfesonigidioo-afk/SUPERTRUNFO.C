@@ -3,8 +3,9 @@
 int main() {
 
 char estado[50], codigodacarta[50], nomedacidade[50],estado2[50], codigodacarta2[50], nomedacidade2[50];
-int populacao, numerodepontosturisticos,populacao2, numerodepontosturisticos2;
+int  numerodepontosturisticos, numerodepontosturisticos2;
 float PIB,area,PIB2,area2;
+unsigned long int populacao,populacao2;
 
 //carta 1//
 
@@ -23,7 +24,7 @@ printf("Nome da cidade: ");
 scanf("%s", nomedacidade);
 
 printf("Populacao: ");
-scanf("%i", &populacao);
+scanf("%lu", &populacao);
 
 printf("Area (em km2): ");
 scanf("%f", &area);
@@ -52,7 +53,7 @@ printf("Nome da cidade: ");
 scanf("%s", nomedacidade2);
 
 printf("Populacao: ");
-scanf("%i", &populacao2);
+scanf("%lu", &populacao2);
 
 printf("Area (em km2): ");
 scanf("%f", &area2);
@@ -87,6 +88,68 @@ capital=PIB/populacao;
 float capital2;
 capital2=PIB2/populacao2;
 
+//poder//
+
+//carta 1//
+
+float poder;
+poder = densidade+capital+populacao+PIB+area+numerodepontosturisticos;
+
+//carta 2//
+
+float poder2;
+poder2 = densidade2+capital2+populacao2+PIB2+area2+numerodepontosturisticos2;
+
+//super trunfo//
+
+//cartas 1 //
+
+int rp;
+rp= populacao>populacao2;
+
+int ra;
+ra= area>area2;
+
+int rpib;
+rpib= PIB>PIB2;
+
+int rnp;
+rnp= numerodepontosturisticos>numerodepontosturisticos2;
+
+int rpibpc;
+rpibpc= capital>capital2;
+
+int rdp;
+rdp= densidade<densidade2;
+
+int  rpoder;
+rpoder= poder>poder2;
+
+//carta2//
+
+int rp2;
+rp2= populacao<populacao2;
+
+int ra2;
+ra2= area<area2;
+
+int rpib2;
+rpib2= PIB<PIB2;
+
+int rnp2;
+rnp2= numerodepontosturisticos<numerodepontosturisticos2;
+
+int rpibpc2;
+rpibpc2= capital<capital2;
+
+int rdp2;
+rdp2= densidade>densidade2;
+
+int  rpoder2;
+rpoder2= poder<poder2;
+
+
+
 //informaçoes das cartas //
 
 //carta 1//
@@ -96,7 +159,7 @@ printf("carta: 1");
 printf("Estado: %s \n", estado);
 printf("codigo da carta: %s \n", codigodacarta);
 printf("nome da cidade: %s \n", nomedacidade);
-printf("populaçao: %i \n", populacao);
+printf("populaçao: %lu \n", populacao);
 printf("Area: %.3f (em km2) \n", area);
 printf("PIB: %.3f de reais \n", PIB);
 printf("Numero de pontos turisticos: %i \n", numerodepontosturisticos);
@@ -110,12 +173,26 @@ printf("carta: 2");
 printf("Estado: %s \n", estado2);
 printf("codigo da carta: %s \n", codigodacarta2);
 printf("nome da cidade: %s \n", nomedacidade2);
-printf("populaçao: %i \n", populacao2);
+printf("populaçao: %lu \n", populacao2);
 printf("Area: %.3f (em km2) \n", area2);
 printf("PIB: %.3f de reais \n", PIB2);
 printf("Numero de pontos turisticos: %i \n", numerodepontosturisticos2);
 printf("a Densidade Populacional e de :%.2f hab/km²\n", densidade2);
 printf("o PIB per Capita e de:%.2f reais\n", capital2);
+
+//COMPARAÇAO DE CARTAS//
+
+printf(" \nAGORA VAMOS COMPARA AS CARTAS!\n");
+printf("\nSE O RESULTADO FOR (1) O ATRIBUTO GANHOU, MAS SE FOR (0) O ATRIBUTO PERDEU!\n");
+printf("carta 1: (%i) / carta 2: (%i) \n", rp,rp2);
+printf("carta 1: (%i) / carta 2: (%i) \n", ra,ra2);
+printf("carta 1: (%i) / carta 2: (%i) \n", rpib,rpib2);
+printf("carta 1: (%i) / carta 2: (%i) \n", rnp,rnp2);
+printf("carta 1: (%i) / carta 2: (%i) \n", rpibpc,rpibpc2);
+printf("carta 1: (%i) / carta 2: (%i) \n", rdp,rdp2);
+printf("carta 1: (%i) / carta 2: (%i) \n", rpoder,rpoder2);
+
+
 
 return 0;
 }
